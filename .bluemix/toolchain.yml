@@ -1,7 +1,6 @@
 version: '2'
 template:
-  name: "{{projectName}}"
-  generator: migration-engine-dearchive
+  name: "Build your own toolchain"
   description: "This toolchain has no preconfigured tools. If you are already familiar with toolchains, you can set up your own toolchain.\n\nTo get started, click **Create**."
   info:
     git url: >-
@@ -9,6 +8,7 @@ template:
     git branch: '[master](https://github.com/open-toolchain/empty-toolchain/tree/master)'
 toolchain:
   name: 'empty-toolchain-{{timestamp}}'
+  generator: migration-engine-dearchive
   template:
     getting_started: "**Your toolchain is ready!**\n**Quick start:** You can now add tool integrations. For step-by-step instructions, see the [tutorial](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom?task=2) for this toolchain."
 services: {}
