@@ -1,11 +1,8 @@
 version: '2'
-messages:
-  $i18n: locales.yml
 template:
-  name:
-    $ref: "#/messages/template.name"
-  description:
-    $ref: "#/messages/template.description"
+  name: "{{projectName}}"
+  generator: migration-engine-dearchive
+  description: "This toolchain has no preconfigured tools. If you are already familiar with toolchains, you can set up your own toolchain.\n\nTo get started, click **Create**."
   info:
     git url: >-
       [https://github.com/open-toolchain/empty-toolchain](https://github.com/open-toolchain/empty-toolchain)
@@ -13,7 +10,6 @@ template:
 toolchain:
   name: 'empty-toolchain-{{timestamp}}'
   template:
-    getting_started:
-      $ref: "#/messages/template.gettingStarted"
+    getting_started: "**Your toolchain is ready!**\n**Quick start:** You can now add tool integrations. For step-by-step instructions, see the [tutorial](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom?task=2) for this toolchain."
 services: {}
 form: {}
